@@ -8,21 +8,21 @@ const KEY_USERNAME = "userName";
  * 로그인 버튼 클릭 시 실행되는 함수
  */
 function onClickLoginBtn(event){
-    //1) event의 기본 행동이 발생되지 않도록 막는다.
-    event.preventDefault();
-  
-    //2) form을 다시 숨긴다.
-    frmLogin.classList.add(HIDDEN_CLASSNAME);
-  
-    //3) inputLogin.value 를 변수에 저장한다.
-    const userName = inputLogin.value;
-  
-    //4) 3)의 값을 userName 이라는 key와 함께 local storage에 저장한다.
-    localStorage.setItem(KEY_USERNAME, userName);
-  
-    //5) 함수 호출
-    displayGreeting(userName);
-  /**
+  //1) event의 기본 행동이 발생되지 않도록 막는다.
+  event.preventDefault();
+
+  //2) form을 다시 숨긴다.
+  frmLogin.classList.add(HIDDEN_CLASSNAME);
+
+  //3) inputLogin.value 를 변수에 저장한다.
+  const userName = inputLogin.value;
+
+  //4) 3)의 값을 userName 이라는 key와 함께 local storage에 저장한다.
+  localStorage.setItem(KEY_USERNAME, userName);
+
+  //5) 함수 호출
+  displayGreeting(userName);
+/**
  * h1을 디스플레이하는 함수.
  * h1요소 안에 인사말 텍스트를 추가하고, 히든 클래스 제거
  */
